@@ -1,0 +1,35 @@
+# Don't print a new line at the start of the prompt
+add_newline = false
+
+format = """$username $hostname $directory $cmd_duration
+$time"""
+
+[cmd_duration]
+min_time = 50
+show_milliseconds = false
+format = "[<|>$duration]($style)"	
+
+[time]
+time_format = "%T"
+format = "[||$time >> ]($style)"
+style = "bold #ffb733"
+disabled = false
+
+[directory]
+truncate_to_repo = false
+style = "bold #00ffa5"
+
+[hostname]
+ssh_only = false
+format = "[<$hostname>]($style)"
+trim_at = "-"
+style = "bold #ffb733"
+disabled = false
+
+[username]
+style_user = "bold green"
+format = "[||$user]($style)"
+show_always = true
+
+[line_break]
+disabled = false
